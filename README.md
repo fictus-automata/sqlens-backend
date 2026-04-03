@@ -182,8 +182,8 @@ export DATABASE_URL="postgresql+psycopg://postgres:postgres@localhost:5432/altim
 
 ### 3) Initialize tables (dev-only)
 
-```bashpython -c "import asyncio; from app.db.session import init_db; asyncio.run(init_db())"
-.venv/bin/
+```bash
+.venv/bin/python -c "import asyncio; from app.db.session import init_db; asyncio.run(init_db())"
 ```
 
 Note: this creates tables directly from ORM metadata (no Alembic migrations). For Postgres, ensure the configured role/database exist and Postgres is running.
